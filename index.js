@@ -1,15 +1,6 @@
-import Gesture from './lib/Gesture'
-import GestureEvent from './lib/GestureEvent'
-import GestureBase from './lib/GestureBase'
-import UIEvent from './lib/UIEvent'
-import FrameRate from './lib/FrameRate'
-import FrameRateBase from './lib/FrameRateBase'
-
-export {
-	Gesture,
-	GestureEvent,
-	GestureBase,
-	UIEvent,
-	FrameRate,
-	FrameRateBase,
-}
+export { default as Gesture } from './lib/Gesture'
+export { default as GestureEvent } from './lib/GestureEvent'
+export { default as GestureBase } from './lib/GestureBase'
+export { default as UIEvent } from './lib/UIEvent'
+export { default as FrameRate } from './lib/FrameRate'
+export { default as FrameRateBase } from './lib/FrameRateBase'
