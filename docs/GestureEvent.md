@@ -112,14 +112,14 @@ Represents an 'onDragStart', fired after an element is selected, when first move
 **Example**  
 ```js
 Gesture.addEventListener(myDiv, GestureEvent.DRAG_START, handleDragStart)
-		//
-		function handleDragStart(event) {
-			// coordinate position of mouse/touch
-			console.log(event.position)
 
-			// coordinate position of target element
-			console.log(event.element)
-		}
+function handleDragStart(event) {
+	// coordinate position of mouse/touch
+	console.log(event.position)
+
+	// coordinate position of target element
+	console.log(event.element)
+}
 ```
 <a name="GestureEvent.DRAG_STOP"></a>
 
@@ -131,14 +131,14 @@ Represents an 'onDragStop', fired after an element is selected, moved, then rele
 **Example**  
 ```js
 Gesture.addEventListener(myDiv, GestureEvent.DRAG_STOP, handleDragStop)
-		//
-		function handleDragStop(event) {
-			// coordinate position of mouse/touch
-			console.log(event.position)
 
-			// velocity, ie change in distance, of target element
-			console.log(event.velocity)
-		}
+function handleDragStop(event) {
+	// coordinate position of mouse/touch
+	console.log(event.position)
+
+	// velocity, ie change in distance, of target element
+	console.log(event.velocity)
+}
 ```
 <a name="GestureEvent.SWIPE"></a>
 
@@ -150,17 +150,17 @@ Represents an 'onSwipe', fired just after a DRAG_STOP, but different event prope
 **Example**  
 ```js
 Gesture.addEventListener(myDiv, GestureEvent.SWIPE, handleSwipe );
-		//
-		function handleSwipe(event) {
-			// direction of swipe, as strings 
-			console.log(event.direction)
 
-			// distance covered from down to release
-			console.log(event.distance)
+function handleSwipe(event) {
+	// direction of swipe, as strings 
+	console.log(event.direction)
 
-			// velocity, aka speed of swipe
-			console.log(event.velocity)
-		}
+	// distance covered from down to release
+	console.log(event.distance)
+
+	// velocity, aka speed of swipe
+	console.log(event.velocity)
+}
 ```
 <a name="GestureEvent.Event"></a>
 
@@ -186,19 +186,19 @@ Creates a new CustomEvent with properties assigned to it, accessible fomr the pa
 **Example**  
 ```js
 Gesture.add(myDiv, GestureEvent.CLICK, handleClick)
-		function handleClick(event) {
-			console.log(event)
-			console.log('global mouse:', event.mouse.global.x, event.mouse.global.y)
-			console.log('local mouse:', event.mouse.local.x, event.mouse.local.y)
-			console.log('element:', event.element.x, event.element.y)
-		}	
-		Gesture.add(dragDiv, GestureEvent.DRAG, handleDrag)
-		function handleDrag(event) {
-			console.log(event)
-			console.log('element:', event.element.x, event.element.y)
-			console.log('distance:', event.distance.x, event.distance.y)
-			console.log('velocity:', event.velocity.x, event.velocity.y)
-		}					
+function handleClick(event) {
+	console.log(event)
+	console.log('global mouse:', event.mouse.global.x, event.mouse.global.y)
+	console.log('local mouse:', event.mouse.local.x, event.mouse.local.y)
+	console.log('element:', event.element.x, event.element.y)
+}	
+Gesture.add(dragDiv, GestureEvent.DRAG, handleDrag)
+function handleDrag(event) {
+	console.log(event)
+	console.log('element:', event.element.x, event.element.y)
+	console.log('distance:', event.distance.x, event.distance.y)
+	console.log('velocity:', event.velocity.x, event.velocity.y)
+}					
 ```
 <a name="GestureEvent.stop"></a>
 
@@ -215,14 +215,14 @@ Stops all future events of the type during the event loop, is a native equivilen
 **Example**  
 ```js
 Gesture.add(parentDiv, GestureEvent.CLICK, handleParentClick)
-			function handleParentClick(event) {
-				// This will not be heard
-				console.log('parent click heard')
-			}
-			
-			Gesture.add(childDiv, GestureEvent.CLICK, handleChildClick)
-			function handleChildClick(event) {
-				GestureEvent.stop(event)
-				console.log('child click heard')
-			}					
+function handleParentClick(event) {
+	// This will not be heard
+	console.log('parent click heard')
+}
+
+Gesture.add(childDiv, GestureEvent.CLICK, handleChildClick)
+function handleChildClick(event) {
+	GestureEvent.stop(event)
+	console.log('child click heard')
+}					
 ```

@@ -44,9 +44,9 @@ Registers an event so that the listener receives notification of an event.
 **Example**  
 ```js
 Gesture.addEventListener(myDiv, GestureEvent.CLICK, handleClick)
-			function handleClick(event) {
-				console.log('Click heard')
-			}					
+function handleClick(event) {
+	console.log('Click heard')
+}					
 ```
 <a name="Gesture.remove/removeEventListener"></a>
 

@@ -32,37 +32,37 @@ import { FrameRate } from 'ad-events'
 **Example**  
 ```js
 // have any methods			
-function myFunctionA () {
-	console.log('myFunctionA')
-}
+		function myFunctionA () {
+			console.log('myFunctionA')
+		}
 
-function myFunctionB() {
-	console.log('myFunctionB')
-}
+		function myFunctionB() {
+			console.log('myFunctionB')
+		}
 
-function myFunctionC() {
-	console.log('myFunctionC')
-}
+		function myFunctionC() {
+			console.log('myFunctionC')
+		}
 
-// Register any method, anywhere
-FrameRate.register(this, myFunctionA)
-FrameRate.register(this, myFunctionB)
+		// Register any method, anywhere
+		FrameRate.register(this, myFunctionA)
+		FrameRate.register(this, myFunctionB)
 
-// Register with custom time, say only 7 calls per second
-FrameRate.register(this, myFunctionC, 7)
+		// Register with custom time, say only 7 calls per second
+		FrameRate.register(this, myFunctionC, 7)
 
-// Pause the whole engine so no methods are called
-FrameRate.pause()
+		// Pause the whole engine so no methods are called
+		FrameRate.pause()
 
-// Then start is back up
-FrameRate.resume()
+		// Then start is back up
+		FrameRate.resume()
 
-// or remove a method later
-FrameRate.unregister(this, myFunctionA)
+		// or remove a method later
+		FrameRate.unregister(this, myFunctionA)
 
-// or pause all methods at a specific frame rate.
-// this pauses only myFunctionC, but myFunctionB will continue to be called
-FrameRate.pause(7) 
+		// or pause all methods at a specific frame rate.
+		// this pauses only myFunctionC, but myFunctionB will continue to be called
+		FrameRate.pause(7) 
 ```
 <a name="FrameRate+tick"></a>
 
@@ -140,7 +140,7 @@ FrameRate.pause(18, 24, 30)
 
 ### FrameRate.resume(arguments)
 Resumes the engine's ticker, activating ALL methods listening to FrameRate. 
-			However, by passing in a target Frames Per Second, it will only resume those methods.
+However, by passing in a target Frames Per Second, it will only resume those methods.
 
 **Kind**: static method of [<code>FrameRate</code>](#FrameRate)  
 
