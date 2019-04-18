@@ -16,9 +16,12 @@ license](https://img.shields.io/npm/l/@ff0000-ad-tech%2Fad-events.svg?style=flat
 [![PRs
 Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-# Geom
+# Events
 
----
+A package of global utilities for handling global events, touch & mouse events, along with a universal ticker.
+
+* * *
+
 
 ## <a name="FrameRate" href="./docs/FrameRate.md">FrameRate</a>
 
@@ -73,4 +76,4 @@ Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-squ
 * <a href="./docs/UIEvent.md#UIEvent.RESIZE">.RESIZE</a> : <code>string</code>
 * <a href="./docs/UIEvent.md#UIEvent.SLIDER_UPDATE">.SLIDER_UPDATE</a> : <code>string</code>
 
----
+* * *
