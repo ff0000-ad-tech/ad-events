@@ -32,37 +32,37 @@ import { FrameRate } from 'ad-events'
 **Example**  
 ```js
 // have any methods			
-		function myFunctionA () {
-			console.log('myFunctionA')
-		}
+function myFunctionA () {
+	console.log('myFunctionA')
+}
 
-		function myFunctionB() {
-			console.log('myFunctionB')
-		}
+function myFunctionB() {
+	console.log('myFunctionB')
+}
 
-		function myFunctionC() {
-			console.log('myFunctionC')
-		}
+function myFunctionC() {
+	console.log('myFunctionC')
+}
 
-		// Register any method, anywhere
-		FrameRate.register(this, myFunctionA)
-		FrameRate.register(this, myFunctionB)
+// Register any method, anywhere
+FrameRate.register(this, myFunctionA)
+FrameRate.register(this, myFunctionB)
 
-		// Register with custom time, say only 7 calls per second
-		FrameRate.register(this, myFunctionC, 7)
+// Register with custom time, say only 7 calls per second
+FrameRate.register(this, myFunctionC, 7)
 
-		// Pause the whole engine so no methods are called
-		FrameRate.pause()
+// Pause the whole engine so no methods are called
+FrameRate.pause()
 
-		// Then start is back up
-		FrameRate.resume()
+// Then start is back up
+FrameRate.resume()
 
-		// or remove a method later
-		FrameRate.unregister(this, myFunctionA)
+// or remove a method later
+FrameRate.unregister(this, myFunctionA)
 
-		// or pause all methods at a specific frame rate.
-		// this pauses only myFunctionC, but myFunctionB will continue to be called
-		FrameRate.pause(7) 
+// or pause all methods at a specific frame rate.
+// this pauses only myFunctionC, but myFunctionB will continue to be called
+FrameRate.pause(7) 
 ```
 <a name="FrameRate+tick"></a>
 
@@ -86,10 +86,10 @@ Registers a method to be called, by adding it to collection.
 **Example**  
 ```js
 // Uses the default fps, being called 30 times per second
-			FrameRate.register(this, myFunctionA)
+FrameRate.register(this, myFunctionA)
 
-			// Set the fps to only be called 12 times per second 
-			FrameRate.register(this, myFunctionB, 12)
+// Set the fps to only be called 12 times per second 
+FrameRate.register(this, myFunctionB, 12)
 ```
 <a name="FrameRate.unregister"></a>
 
@@ -107,10 +107,10 @@ Unregisters a method from being called, by removing it from collection.
 **Example**  
 ```js
 // searches all interal pools to unregister the callback
-			FrameRate.unregister(this, myFunctionA)
+FrameRate.unregister(this, myFunctionA)
 
-			// if the fps when registered is known, will only look in that pool to unregister
-			FrameRate.unregister(this, myFunctionB, 12)
+// if the fps when registered is known, will only look in that pool to unregister
+FrameRate.unregister(this, myFunctionB, 12)
 ```
 <a name="FrameRate.pause"></a>
 
@@ -128,13 +128,13 @@ Pauses the engine's ticker, deactivating ALL methods listening to FrameRate.
 **Example**  
 ```js
 // Pauses the whole engine
-			FrameRate.pause()
-			
-			// Pauses only methods registered at 12 Frames Per Second
-			FrameRate.pause(12)
+FrameRate.pause()
 
-			// Pauses all methods registerd at provided Frames Per Seconds
-			FrameRate.pause(18, 24, 30)
+// Pauses only methods registered at 12 Frames Per Second
+FrameRate.pause(12)
+
+// Pauses all methods registerd at provided Frames Per Seconds
+FrameRate.pause(18, 24, 30)
 ```
 <a name="FrameRate.resume"></a>
 
@@ -151,13 +151,13 @@ Resumes the engine's ticker, activating ALL methods listening to FrameRate.
 **Example**  
 ```js
 // Resumes the whole engine
-			FrameRate.resume()
-			
-			// Resumes only methods registered at 12 Frames Per Second
-			FrameRate.resume(12)
+FrameRate.resume()
 
-			// Resumes all methods registerd at provided Frames Per Seconds
-			FrameRate.resume(18, 24, 30)
+// Resumes only methods registered at 12 Frames Per Second
+FrameRate.resume(12)
+
+// Resumes all methods registerd at provided Frames Per Seconds
+FrameRate.resume(18, 24, 30)
 ```
 <a name="FrameRate.secondsAsFrames"></a>
 
@@ -174,15 +174,15 @@ Converts a time in seconds to a Frames Per Second decimal value. For use when an
 **Example**  
 ```js
 // You want a callback to happen every 3.2 seconds
-			const time = 3.2
+const time = 3.2
 
-			function myFunction(){
-				console.log(`I get called every ${time} seconds`)
-			}
+function myFunction(){
+	console.log(`I get called every ${time} seconds`)
+}
 
-			// Get the time as an Frames Per Second
-			const fps = FrameRate.secondsAsFrames(time)
-			
-			// Use it to register
-			FrameRate.register(myFunction, fps)
+// Get the time as an Frames Per Second
+const fps = FrameRate.secondsAsFrames(time)
+
+// Use it to register
+FrameRate.register(myFunction, fps)
 ```
