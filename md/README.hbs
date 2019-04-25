@@ -27,9 +27,9 @@ A package of global utilities for handling global events, touch & mouse events, 
 {{>header}}
 
 {{#groupBy (option "group-by")~}}
-{{#ifCond kind "!=" "constructor"}}
+{{#if ("!=" kind "constructor")}}
 {{>member-index-grouped}}
-{{/ifCond}}
+{{/if}}
 {{/groupBy~}}
 
 {{/classes}}
