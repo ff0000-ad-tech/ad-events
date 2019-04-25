@@ -25,23 +25,14 @@ A package of global utilities for handling global events, touch & mouse events, 
 
 ## <a name="FrameRate" href="./docs/FrameRate.md">FrameRate</a>
 
-* new FrameRate()
-* _instance_
-    * .tick
-* _static_
-    * <a href="./docs/FrameRate.md#FrameRate.register">.register(from, handler, fps)</a>
-    * <a href="./docs/FrameRate.md#FrameRate.unregister">.unregister(from, handler, fps)</a>
-    * <a href="./docs/FrameRate.md#FrameRate.pause">.pause(arguments)</a>
-    * <a href="./docs/FrameRate.md#FrameRate.resume">.resume(arguments)</a>
-    * <a href="./docs/FrameRate.md#FrameRate.secondsAsFrames">.secondsAsFrames(sec)</a>
-
-## <a name="FrameRateBase" href="./docs/FrameRateBase.md">FrameRateBase</a>
-
-* new FrameRateBase()
+* <a href="./docs/FrameRate.md#FrameRate.register">.register(from, handler, fps)</a>
+* <a href="./docs/FrameRate.md#FrameRate.unregister">.unregister(from, handler, fps)</a>
+* <a href="./docs/FrameRate.md#FrameRate.pause">.pause(arguments)</a>
+* <a href="./docs/FrameRate.md#FrameRate.resume">.resume(arguments)</a>
+* <a href="./docs/FrameRate.md#FrameRate.secondsAsFrames">.secondsAsFrames(sec)</a>
 
 ## <a name="Gesture" href="./docs/Gesture.md">Gesture</a>
 
-* new Gesture()
 * <a href="./docs/Gesture.md#Gesture.add/addEventListener">.add/addEventListener(target, name, handler)</a>
 * <a href="./docs/Gesture.md#Gesture.remove/removeEventListener">.remove/removeEventListener(target, name, handler)</a>
 * <a href="./docs/Gesture.md#Gesture.disable">.disable(target)</a>
@@ -49,13 +40,8 @@ A package of global utilities for handling global events, touch & mouse events, 
 * <a href="./docs/Gesture.md#Gesture.enable">.enable(target)</a>
 * <a href="./docs/Gesture.md#Gesture.enableChildren">.enableChildren(target)</a>
 
-## <a name="GestureBase" href="./docs/GestureBase.md">GestureBase</a>
-
-* new GestureBase()
-
 ## <a name="GestureEvent" href="./docs/GestureEvent.md">GestureEvent</a>
 
-* new GestureEvent()
 * <a href="./docs/GestureEvent.md#GestureEvent.OVER">.OVER</a> : <code>string</code>
 * <a href="./docs/GestureEvent.md#GestureEvent.OUT">.OUT</a> : <code>string</code>
 * <a href="./docs/GestureEvent.md#GestureEvent.MOVE">.MOVE</a> : <code>string</code>
@@ -71,7 +57,6 @@ A package of global utilities for handling global events, touch & mouse events, 
 
 ## <a name="UIEvent" href="./docs/UIEvent.md">UIEvent</a>
 
-* new UIEvent()
 * <a href="./docs/UIEvent.md#UIEvent.ENABLED">.ENABLED</a> : <code>string</code>
 * <a href="./docs/UIEvent.md#UIEvent.RESIZE">.RESIZE</a> : <code>string</code>
 * <a href="./docs/UIEvent.md#UIEvent.SLIDER_UPDATE">.SLIDER_UPDATE</a> : <code>string</code>
